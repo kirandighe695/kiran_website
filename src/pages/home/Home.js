@@ -10,7 +10,7 @@ function Home() {
         <div className="home-container">
             <div className="hero-section" style={{ backgroundImage: `url(${BgImage})` }}>
                 <div className="hero-content">
-                    <h1>Mainland Night Market</h1>
+                    <h1>Themeland Night</h1>
                     <p>Open Every Weekend from March 1 to 31, 2025</p>
                     <div className="hero-buttons">
                         <button className="btn-primary">Get Tickets</button>
