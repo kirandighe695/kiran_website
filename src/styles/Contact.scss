@@ -1,0 +1,125 @@
+.contact-container {
+    text-align: center;
+    margin: auto;
+
+    .contact {
+        background-color: #33266e;
+        color: #fff;
+        padding: 4rem;
+    }
+
+    .contact-heading {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .contact-info-container {
+        margin-top: 2rem;
+        line-height: 1.5;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .form-container {
+        margin-top: 3rem;
+        padding: 1rem;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .name-inputs {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .input-group {
+        width: 100%;
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+    }
+
+    button {
+        background-color: #252826;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+
+    .map-container {
+        margin-top: 3rem;
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 8px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 0.9rem;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-heading {
+        font-size: 2em;
+    }
+
+    .name-inputs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-heading {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
