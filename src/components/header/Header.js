@@ -33,7 +33,9 @@ function Header() {
                         <li><Link to="/event" onClick={() => setMenuOpen(false)}>Events</Link></li>
                         <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
                         <div className="buy-tickets-container">
-                            <Link to="/tickets" className="buy-tickets-button" onClick={() => setMenuOpen(false)}>Buy Tickets</Link>
+                            <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+                                <button className="buy-tickets-button">Buy Tickets</button>
+                            </a>
                         </div>
                         <div className="social-icons">
                             <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
@@ -65,8 +67,11 @@ function Header() {
                         <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
                     </ul>
                     <div className="buy-tickets-container">
-                        <Link to="/tickets" className="buy-tickets-button" onClick={() => setMenuOpen(false)}>Buy Tickets</Link>
+                        <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+                            <button className="buy-tickets-button">Buy Tickets</button>
+                        </a>
                     </div>
+
                     <div className="social-icons">
                         <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
                         <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

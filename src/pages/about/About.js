@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/About.scss';
 import BgImage from '../../styles/assets/about.webp';
 import about from '../../styles/assets/bgImage.webp';
@@ -19,6 +20,13 @@ const images = [
 ];
 
 function About() {
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div className="about-container">
             <div className="hero-section" style={{ backgroundImage: `url(${BgImage})` }}>
@@ -33,9 +41,8 @@ function About() {
                     <div className="hero-text">
                         <h1>Themeland Night Market</h1>
                         <h2>Operating since 2020</h2>
-                        <p className="description">This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell the world about your business, and made this text yours.</p>
-                        <p className="description">This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell the world about your business, and made this text yours. This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell the world about your business, and made this text yours. This is a paragraph. You can write your own content here, and fill in the blanks.</p>
-                        <button className="vendors-button">See Our Vendors</button>
+                        <p className="description">This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell the world about your business, and made this text yours. This is a paragraph. You can write your own content here, and fill in the blanks. What's your story and where do you go from here? Tell the world about your business, and made this text yours.</p>
+                        <button className="vendors-button" onClick={() => handleNavigate('/craft-vendors')}>See Our Vendors</button>
                     </div>
                 </div>
             </section>
@@ -46,7 +53,9 @@ function About() {
                         <h1>Find the Perfect Gift!</h1>
                         <h2>Handmade with Love</h2>
                         <p className="description">Discover unique, handcrafted gifts made with love. Whether you're shopping for a friend, family, or yourself, our vendors offer something special for everyone.</p>
-                        <button className="buy-tickets">Buy Tickets</button>
+                        <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+                            <button className="buy-tickets">Buy Tickets</button>
+                        </a>
                     </div>
                     <div className="gift-image">
                         <img src={IMG1} alt="Gift Items" />

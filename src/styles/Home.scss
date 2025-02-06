@@ -1,5 +1,5 @@
 .hero-section {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center;
     padding: 2rem;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -44,18 +45,22 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .btn-primary {
     background-color: #fff;
     color: #333;
     border: none;
+    text-decoration: none;
 }
 
 .btn-secondary {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
+    margin-top: 22px;
+    padding: 0.65rem 2rem;
 }
 
 .btn-primary:hover {
@@ -98,8 +103,9 @@
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: transform 0.3s ease;
+    height: 80vh;
 }
 
 .card img {
@@ -128,8 +134,10 @@
 .learn {
     background-color: #48382E;
     color: #FFF;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    padding: 0.7rem;
+    width: 50%;
+    margin-left: 5rem;
     text-transform: uppercase;
     border: none;
     cursor: pointer;
@@ -169,6 +177,15 @@
 
     .hero-buttons {
         flex-direction: column;
+    }
+
+    .card {
+        height: 70vh;
+        object-fit: cover;
+    }
+
+    .learn {
+        margin-left: 4rem;
     }
 
     .btn-primary,

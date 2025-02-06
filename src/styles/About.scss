@@ -1,8 +1,6 @@
 .hero-section {
     background-size: cover;
     background-position: center;
-    text-align: center;
-    padding: 100px 20px;
     color: white;
     font-size: 3em;
     font-weight: bold;
@@ -12,7 +10,7 @@
 .hero1,
 .gift-section {
     background-color: #f8f8f8;
-    padding: 60px 20px;
+    padding: 40px 20px;
 
     .hero-content1,
     .gift-content {
@@ -57,11 +55,11 @@
 
         .vendors-button,
         .buy-tickets {
-            background-color: #007bff;
+            background-color: #48382E;
             color: white;
             padding: 12px 30px;
             border: none;
-            border-radius: 6px;
+            border-radius: 2rem;
             font-size: 1.2em;
             cursor: pointer;
             transition: 0.3s;
