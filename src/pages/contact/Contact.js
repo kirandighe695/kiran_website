@@ -118,7 +118,7 @@ function Contact() {
             </div>
 
             <div className="map-container" ref={mapRef}>
-                <img src={Map} alt="Static Map" useMap="#map" />
+                <img src={Map} alt="Static Map" useMap="#map" className='img'/>
                 <map name="map">
                     {markers.map((marker, index) => (
                         <area

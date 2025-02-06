@@ -1,0 +1,44 @@
+.become-vendor {
+    background-color: rgb(51, 38, 110);
+    padding: 20px;
+    text-align: center;
+    width: 103%;
+}
+
+.become-vendor-heading {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+    margin-top: 3rem;
+}
+
+.become-vendor-text {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: start;
+}
+
+.apply-now-button {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+}
+
+.apply-now-button:hover {
+    background-color: #fff;
+    color: rgb(51, 38, 110);
+}
+
+@media (max-width: 768px) {
+    .become-vendor-heading {
+        font-size: 1.5em;
+    }
+
+    .become-vendor-text {
+        font-size: 1em;
+    }
+}

@@ -1,11 +1,60 @@
 import React from 'react';
+import BgCraft from '../../styles/assets/craftbg.webp';
+import '../../styles/Vendor.scss';
+import SubFooter from '../../components/sub_footer/SubFooter';
 
-function Craft_vendor() {
+const images = [
+    require('../../styles/assets/craft1.webp'),
+    require('../../styles/assets/craft2.webp'),
+    require('../../styles/assets/craft3.webp'),
+    require('../../styles/assets/craft4.webp'),
+    require('../../styles/assets/img1.webp'),
+    require('../../styles/assets/nm1.webp')
+];
+
+function CraftVendor() {
+    const vendors = [
+        { name: 'Madelyn Yang', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Cooke Crafts', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Lowell Murray', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Emily Williams', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Wolfe Designs', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Clementine Jewelry', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Lee Woodworking', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Figueroa Chocolates', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+        { name: 'Violet Pham', website: 'https://yoursite.com/', instagram: 'https://www.instagram.com/' },
+    ];
+
     return (
-        <div>
-            <h1>This is Craft_vendor page</h1>
+        <div className="craft-container">
+            <div className="craft-section" style={{ backgroundImage: `url(${BgCraft})` }}>
+                <h1>Vendors</h1>
+            </div>
+
+            <div className="vendor-bg">
+                <div className="vendor-list">
+                    {vendors.map((vendor, index) => (
+                        <div className="vendor-item py-2" key={index}>
+                            <h4>{vendor.name}</h4>
+                            <p>Local Vendor</p>
+                            <a href={vendor.website} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                            <a href={vendor.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="gallery-container">
+                    {images.map((img, index) => (
+                        <div key={index} className="gallery-item">
+                            <img src={img} alt={`Gallery ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <SubFooter />
         </div>
-    )
+    );
 }
 
-export default Craft_vendor;
+export default CraftVendor;
