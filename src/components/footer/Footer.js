@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/Footer.scss';
 import logo from '../../styles/assets/logo1.png';
+import Sign from '../../styles/assets/sign.png'
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
@@ -61,7 +62,8 @@ const Footer = () => {
 
                 <div className="row">
                     <div className="col-12 footer-credits">
-                        <p>Website Created & Hosted By Kiran Dighe</p>
+                        <p>Website Created & Hosted By</p>
+                        <img src={Sign} alt="sign" className='sign'/>
                     </div>
                 </div>
 

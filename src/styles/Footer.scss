@@ -100,6 +100,14 @@ footer {
             font-size: 0.75rem;
         }
     }
+
+    .sign {
+        width: 17%;
+
+        @media (max-width: 480px) {
+            width: 30%;
+        }
+    }
 }
 
 .scroll-to-top {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from '../../styles/assets/application.webp';
+import emailjs from 'emailjs-com';
 import '../../styles/Application.scss';
 
 function Application() {
@@ -11,6 +12,9 @@ function Application() {
         specialRequests: "",
     });
 
+    const [responseMessage, setResponseMessage] = useState('');
+    const [isSuccess, setIsSuccess] = useState(null);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -18,7 +22,28 @@ function Application() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form Data:", formData);
+
+        emailjs.send(
+            'service_5j0tc5y',
+            'template_98xj7zk',
+            formData,
+            'p23g0Tg0dfL-1f5yj'
+        )
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setResponseMessage('Email sent successfully!');
+                setIsSuccess(true);
+                setFormData({ firstName: '', lastName: '', email: '', comments: '', specialRequests: '' });
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+                setResponseMessage('Error sending email. Please try again.');
+                setIsSuccess(false);
+            });
+
+        setTimeout(() => {
+            setResponseMessage('');
+        }, 3000);
     };
 
     return (
@@ -84,6 +109,12 @@ function Application() {
                     <div className='text-center'>
                         <button type="submit" className="submit-btn">Submit</button>
                     </div>
+
+                    {responseMessage && (
+                        <div className={isSuccess ? 'success-message' : 'error-message'}>
+                            {responseMessage}
+                        </div>
+                    )}
                 </form>
             </div>
         </div>
