@@ -23,7 +23,7 @@ function Application() {
 
     return (
         <div className="application-container">
-            <div className="application-section" style={{ backgroundImage: `url(${Image})` }}>
+            <div className="application-section" style={{ backgroundImage: `linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 182, 193, 0.5)), url(${Image})` }}>
                 <h1>Vendor Applications</h1>
                 <p>For Craft & Food Vendors, please provide the following information to register for our next event.</p>
             </div>

@@ -29,8 +29,8 @@ function About() {
 
     return (
         <div className="about-container">
-            <div className="hero-section" style={{ backgroundImage: `url(${BgImage})` }}>
-                <h1 style={{ color: 'black', fontSize: '48px', fontWeight: '800' }}>About Us</h1>
+            <div className="hero-section" style={{ backgroundImage: `linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 182, 193, 0.5)), url(${BgImage})` }}>
+                <h1 style={{ color: '#fff', fontSize: '48px', fontWeight: '800' }}>About Us</h1>
             </div>
 
             <section className="hero1">

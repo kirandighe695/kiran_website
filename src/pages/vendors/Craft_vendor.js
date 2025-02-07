@@ -27,7 +27,7 @@ function CraftVendor() {
 
     return (
         <div className="craft-container">
-            <div className="craft-section" style={{ backgroundImage: `url(${BgCraft})` }}>
+            <div className="craft-section" style={{ backgroundImage: `linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 182, 193, 0.5)), url(${BgCraft})` }}>
                 <h1>Vendors</h1>
             </div>
 

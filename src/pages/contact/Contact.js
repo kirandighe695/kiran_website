@@ -51,7 +51,7 @@ function Contact() {
 
     return (
         <div className="contact-container">
-            <div className='contact' style={{ backgroundImage: `url(${contact})` }}>
+            <div className='contact' style={{ backgroundImage: `linear-gradient(rgba(248, 162, 175, 0.5), rgba(255, 182, 193, 0.5)), url(${contact})` }}>
                 <h2 className="contact-heading">Contact Us</h2>
             </div>
             <div className='mt-5'>

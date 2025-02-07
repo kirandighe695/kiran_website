@@ -27,7 +27,7 @@ function Food_vendor() {
 
     return (
         <div className="craft-container">
-            <div className="craft-section" style={{ backgroundImage: `url(${BgFood})` }}>
+            <div className="craft-section" style={{ backgroundImage: `linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 182, 193, 0.5)), url(${BgFood})` }}>
                 <h1>Food Trucks</h1>
             </div>
 

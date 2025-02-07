@@ -12,7 +12,7 @@ const events = [
 function Event() {
     return (
         <div className="event-container">
-            <div className="event-section" style={{ backgroundImage: `url(${BgEvent})` }}>
+            <div className="event-section" style={{ backgroundImage: `linear-gradient(rgba(255, 182, 193, 0.5), rgba(255, 182, 193, 0.5)), url(${BgEvent})` }}>
                 <h1>Upcoming Event Dates</h1>
             </div>
 
