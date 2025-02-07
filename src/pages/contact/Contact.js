@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../../styles/Contact.scss';
 import Map from '../../styles/assets/map.png';
+import contact from '../../styles/assets/contact.jpg';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -50,20 +51,20 @@ function Contact() {
 
     return (
         <div className="contact-container">
-            <div className='contact'>
+            <div className='contact' style={{ backgroundImage: `url(${contact})` }}>
                 <h2 className="contact-heading">Contact Us</h2>
             </div>
-            <div className='mt-4'>
+            <div className='mt-5'>
                 <div className="contact-info">888 Griffiths Way, Themeland ML 12345</div>
                 <div className="contact-info">Tel: (987) 654-3210</div>
                 <div className="contact-info">Email: kirandighe1945@gmail.com</div>
-                <div className="contact-info mt-3">Open Hours:</div>
+                <div className="contact-info mt-5">Open Hours:</div>
                 <div className="contact-info">Monday-Friday: 9:00AM-7:00PM</div>
                 <div className="contact-info">Saturday: 10:30AM-8:00PM</div>
                 <div className="contact-info">Sunday: Closed</div>
             </div>
 
-            <div className="form-container px-5 mt-4">
+            <div className="form-container mt-3">
                 <form onSubmit={handleSubmit}>
                     <div className="name-inputs">
                         <div className="input-group">
@@ -113,12 +114,12 @@ function Contact() {
                         />
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" className='button1'>Submit</button>
                 </form>
             </div>
 
             <div className="map-container" ref={mapRef}>
-                <img src={Map} alt="Static Map" useMap="#map" className='img'/>
+                <img src={Map} alt="Static Map" useMap="#map" className='img' />
                 <map name="map">
                     {markers.map((marker, index) => (
                         <area

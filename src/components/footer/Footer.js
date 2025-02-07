@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/Footer.scss';
 import logo from '../../styles/assets/logo1.png';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
+    const [showScroll, setShowScroll] = useState(false);
+
+    useEffect(() => {
+        const checkScroll = () => {
+            if (window.scrollY > 300) {
+                setShowScroll(true);
+            } else {
+                setShowScroll(false);
+            }
+        };
+
+        window.addEventListener('scroll', checkScroll);
+        return () => window.removeEventListener('scroll', checkScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <footer>
             <div className="container">
@@ -45,6 +64,12 @@ const Footer = () => {
                         <p>Website Created & Hosted By Kiran Dighe</p>
                     </div>
                 </div>
+
+                {showScroll && (
+                    <button className="scroll-to-top" onClick={scrollToTop}>
+                        <FaArrowUp />
+                    </button>
+                )}
             </div>
         </footer>
     );
