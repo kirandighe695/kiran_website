@@ -78,6 +78,7 @@ function Contact() {
             <div className='contact' style={{ backgroundImage: `linear-gradient(rgba(248, 162, 175, 0.5), rgba(255, 182, 193, 0.5)), url(${contact})` }}>
                 <h2 className="contact-heading">Contact Us</h2>
             </div>
+
             <div className='mt-5'>
                 <div className="contact-info">888 Griffiths Way, Themeland ML 12345</div>
                 <div className="contact-info">Tel: (987) 654-3210</div>
@@ -102,6 +103,7 @@ function Contact() {
                                 required
                             />
                         </div>
+
                         <div className="input-group">
                             <label htmlFor="lastName">Last Name*</label>
                             <input
