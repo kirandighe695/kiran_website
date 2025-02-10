@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../../styles/Contact.scss';
-import Map from '../../styles/assets/map.png';
 import emailjs from 'emailjs-com';
 import contact from '../../styles/assets/contact.jpg';
 
@@ -45,26 +44,7 @@ function Contact() {
         }, 3000);
     };
 
-    const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, text: '' });
     const mapRef = useRef(null);
-
-    const markers = [
-        { x: 160, y: 210, label: "Canada Place" },
-        { x: 410, y: 360, label: "Gastown" },
-    ];
-
-    const handleMarkerHover = (marker) => {
-        setTooltip({
-            visible: true,
-            x: marker.x + mapRef.current.offsetLeft + 10,
-            y: marker.y + mapRef.current.offsetTop + 10,
-            text: marker.label,
-        });
-    };
-
-    const handleMarkerMouseOut = () => {
-        setTooltip({ ...tooltip, visible: false });
-    };
 
     useEffect(() => {
         if (mapRef.current) {
@@ -151,29 +131,15 @@ function Contact() {
             </div>
 
             <div className="map-container" ref={mapRef}>
-                <img src={Map} alt="Static Map" useMap="#map" className='img' />
-                <map name="map">
-                    {markers.map((marker, index) => (
-                        <area
-                            key={index}
-                            shape="rect"
-                            coords={`${marker.x},${marker.y},${marker.x + 50},${marker.y + 50}`}
-                            href="#"
-                            alt={marker.label}
-                            className="marker"
-                            onMouseOver={() => handleMarkerHover(marker)}
-                            onMouseOut={handleMarkerMouseOut}
-                        />
-                    ))}
-                </map>
-
-                {tooltip.visible && (
-                    <div
-                        className="tooltip"
-                        style={{ left: tooltip.x, top: tooltip.y }}>
-                        {tooltip.text}
-                    </div>
-                )}
+                <iframe
+                    title="Google Maps - Custom Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.123456789!2d74.286931!3d19.561386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTkuNTYxMzg2LCA3NC4yODY5MzE!5e0!3m2!1sen!2sin!4v1694099876543!5m2!1sen!2sin"
+                    width="100%"
+                    height="500"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                ></iframe>
             </div>
         </div>
     )
